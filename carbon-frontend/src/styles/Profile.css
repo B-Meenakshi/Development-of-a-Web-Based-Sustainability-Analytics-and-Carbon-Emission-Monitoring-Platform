@@ -1,0 +1,1712 @@
+/* =========================================================
+   PROFILE PAGE
+   WHITE + GREEN PROFESSIONAL TEMPLATE
+========================================================= */
+
+.profile-page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 90% 0%,
+      rgba(13, 148, 136, 0.07),
+      transparent 30%
+    ),
+    #f4f8f7;
+
+  color: #17332d;
+
+  font-family:
+    Inter,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.profile-topbar {
+  height: 62px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #dfeae6;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 32px;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 20;
+
+  box-shadow:
+    0 2px 12px rgba(15, 70, 60, 0.04);
+}
+
+.back-button {
+  border: 0;
+
+  background: transparent;
+
+  color: #087f70;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  padding: 7px 10px;
+
+  border-radius: 8px;
+
+  transition: 0.2s;
+}
+
+.back-button:hover {
+  background: #e8f7f3;
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #087f70;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.page-title svg {
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.profile-container {
+  width: min(920px, calc(100% - 36px));
+
+  margin: 22px auto 35px;
+}
+
+
+/* =========================================================
+   PROFILE IDENTITY
+========================================================= */
+
+.profile-identity {
+  background: #ffffff;
+
+  border: 1px solid #e2ebe8;
+
+  border-radius: 17px;
+
+  padding: 18px 22px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 13px;
+
+  box-shadow:
+    0 5px 18px rgba(20, 70, 60, 0.045);
+}
+
+.profile-avatar {
+  width: 62px;
+  height: 62px;
+
+  min-width: 62px;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #087f70,
+      #13b8a6
+    );
+
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+  font-weight: 800;
+
+  box-shadow:
+    0 7px 17px rgba(8, 127, 112, 0.2);
+}
+
+.identity-content {
+  flex: 1;
+}
+
+.identity-content h1 {
+  margin: 0 0 4px;
+
+  color: #17332d;
+
+  font-size: 24px;
+
+  line-height: 1.1;
+}
+
+.identity-content p {
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color: #7d8d87;
+
+  font-size: 11px;
+}
+
+.identity-content p svg {
+  color: #087f70;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   EMPLOYEE / ORGANIZATION INFORMATION
+========================================================= */
+
+.profile-organization {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 7px;
+
+  padding: 5px 9px;
+
+  width: fit-content;
+
+  background: #f0f9f5;
+
+  border: 1px solid #d9eee5;
+
+  border-radius: 8px;
+
+  color: #087f70;
+}
+
+.profile-organization > svg {
+  flex-shrink: 0;
+
+  font-size: 10px;
+}
+
+.profile-organization-text {
+  display: flex;
+  align-items: baseline;
+
+  gap: 4px;
+
+  min-width: 0;
+}
+
+.profile-organization-text span {
+  color: #78928a;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.profile-organization-text strong {
+  color: #24604f;
+
+  font-size: 9px;
+
+  font-weight: 750;
+
+  max-width: 250px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+.member-status {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  background: #e9f8f2;
+
+  color: #087f70;
+
+  border: 1px solid #d4eee5;
+
+  border-radius: 20px;
+
+  padding: 7px 11px;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.member-status svg {
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   TOTAL CARBON CARD
+========================================================= */
+
+.carbon-card {
+  height: 118px;
+
+  background:
+    linear-gradient(
+      120deg,
+      #dff7ef,
+      #d2f1e8
+    );
+
+  border: 1px solid #c5e8dd;
+
+  border-radius: 17px;
+
+  padding: 20px 23px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+
+  overflow: hidden;
+
+  margin-bottom: 13px;
+
+  box-shadow:
+    0 6px 20px rgba(20, 100, 80, 0.06);
+}
+
+.carbon-left {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.carbon-icon {
+  width: 49px;
+  height: 49px;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  color: #0b9b83;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 21px;
+
+  box-shadow:
+    0 5px 15px rgba(20, 100, 80, 0.08);
+}
+
+.card-label {
+  display: block;
+
+  color: #53786e;
+
+  font-size: 8px;
+  font-weight: 850;
+
+  letter-spacing: 1px;
+}
+
+.carbon-number {
+  color: #087f70;
+
+  font-size: 29px;
+  font-weight: 850;
+
+  margin-top: 3px;
+}
+
+.carbon-number small {
+  margin-left: 5px;
+
+  color: #648078;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.carbon-decoration {
+  position: absolute;
+
+  right: 35px;
+  top: 24px;
+
+  color: rgba(8, 127, 112, 0.08);
+
+  font-size: 75px;
+
+  transform: rotate(-12deg);
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.stats-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 11px;
+
+  margin-bottom: 23px;
+}
+
+.stat-card {
+  background: #ffffff;
+
+  border: 1px solid #e3ebe8;
+
+  border-radius: 14px;
+
+  min-height: 83px;
+
+  padding: 13px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  box-shadow:
+    0 4px 14px rgba(20, 70, 60, 0.04);
+
+  transition: 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 19px rgba(20, 70, 60, 0.08);
+}
+
+.stat-icon {
+  width: 39px;
+  height: 39px;
+
+  min-width: 39px;
+
+  border-radius: 11px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+}
+
+.stat-icon.teal {
+  background: #e3f7f2;
+  color: #087f70;
+}
+
+.stat-icon.blue {
+  background: #e7f4fa;
+  color: #1682a8;
+}
+
+.stat-icon.orange {
+  background: #fff2df;
+  color: #d68116;
+}
+
+.stat-card span {
+  display: block;
+
+  color: #899792;
+
+  font-size: 8px;
+
+  font-weight: 750;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.45px;
+
+  white-space: nowrap;
+}
+
+.stat-card strong {
+  display: block;
+
+  color: #20372f;
+
+  font-size: 19px;
+
+  line-height: 1.15;
+
+  margin-top: 3px;
+}
+
+.stat-card small {
+  display: block;
+
+  color: #9aa7a2;
+
+  font-size: 8px;
+
+  margin-top: 2px;
+}
+
+.category-text {
+  font-size: 15px !important;
+
+  max-width: 120px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   LATEST ACTIVITY
+========================================================= */
+
+.latest-section {
+  margin-bottom: 26px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 9px;
+}
+
+.section-header h2 {
+  margin: 0;
+
+  color: #1b352d;
+
+  font-size: 16px;
+}
+
+.section-header p {
+  margin: 3px 0 0;
+
+  color: #929e99;
+
+  font-size: 9px;
+}
+
+.view-history {
+  border: 0;
+
+  background: #e8f7f3;
+
+  color: #087f70;
+
+  border-radius: 8px;
+
+  padding: 7px 10px;
+
+  font-size: 9px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.view-history:hover {
+  background: #d8f1eb;
+}
+
+
+/* =========================================================
+   LATEST ACTIVITY CARD
+========================================================= */
+
+.latest-card {
+  background: #ffffff;
+
+  border: 1px solid #e3ebe8;
+
+  border-radius: 14px;
+
+  padding: 12px 15px;
+
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  box-shadow:
+    0 4px 14px rgba(20, 70, 60, 0.04);
+}
+
+.latest-icon {
+  width: 37px;
+  height: 37px;
+
+  min-width: 37px;
+
+  border-radius: 10px;
+
+  background: #e5f7f2;
+
+  color: #087f70;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+}
+
+.latest-info {
+  flex: 1;
+}
+
+.latest-info strong {
+  display: block;
+
+  color: #293b35;
+
+  font-size: 11px;
+}
+
+.latest-info span {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  color: #98a39f;
+
+  font-size: 8px;
+
+  margin-top: 3px;
+}
+
+.latest-info span svg {
+  font-size: 8px;
+
+  color: #087f70;
+}
+
+.latest-emission {
+  text-align: right;
+}
+
+.latest-emission strong {
+  display: block;
+
+  color: #087f70;
+
+  font-size: 13px;
+}
+
+.latest-emission span {
+  display: block;
+
+  color: #99a49f;
+
+  font-size: 7px;
+
+  margin-top: 2px;
+}
+
+
+/* =========================================================
+   EMPTY ACTIVITY
+========================================================= */
+
+.no-activity {
+  height: 70px;
+
+  background: #ffffff;
+
+  border: 1px dashed #c9ddd7;
+
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  color: #929e99;
+
+  font-size: 10px;
+}
+
+.no-activity svg {
+  color: #0b9b83;
+}
+
+
+/* =========================================================
+   ACCOUNT SECURITY
+========================================================= */
+
+.security-section {
+  background: #ffffff;
+
+  border: 1px solid #dfeae6;
+
+  border-radius: 17px;
+
+  padding: 21px 23px;
+
+  margin-top: 20px;
+
+  box-shadow:
+    0 5px 18px rgba(20, 70, 60, 0.045);
+
+  transition: 0.2s ease;
+}
+
+.security-section:hover {
+  border-color: #cfe2dc;
+
+  box-shadow:
+    0 7px 20px rgba(20, 70, 60, 0.06);
+}
+
+
+/* =========================================================
+   SECURITY HEADER
+========================================================= */
+
+.security-header {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  width: 100%;
+}
+
+.security-icon {
+  width: 40px;
+  height: 40px;
+
+  min-width: 40px;
+
+  border-radius: 11px;
+
+  background: #e5f7f2;
+
+  color: #087f70;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 17px;
+
+  box-shadow:
+    0 3px 9px rgba(8, 127, 112, 0.07);
+}
+
+.security-header > div:nth-child(2) {
+  flex: 1;
+}
+
+.security-header h2 {
+  margin: 0;
+
+  color: #173d36;
+
+  font-size: 19px;
+
+  font-weight: 750;
+
+  line-height: 1.2;
+}
+
+.security-header p {
+  margin: 5px 0 0;
+
+  color: #7b8d87;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   CHANGE PASSWORD BUTTON
+========================================================= */
+
+.change-password-btn {
+  height: 36px;
+
+  padding: 0 13px;
+
+  border: 1px solid #cce5de;
+
+  border-radius: 8px;
+
+  background: #edf9f5;
+
+  color: #087f70;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  white-space: nowrap;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.change-password-btn svg {
+  font-size: 11px;
+}
+
+.change-password-btn:hover {
+  background: #087f70;
+
+  border-color: #087f70;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 4px 10px rgba(8, 127, 112, 0.14);
+}
+
+
+/* =========================================================
+   PASSWORD FORM
+   CURRENT + NEW SIDE BY SIDE
+   CONFIRM PASSWORD BELOW
+========================================================= */
+
+.password-form {
+  width: 100%;
+
+  margin-top: 18px;
+
+  padding-top: 17px;
+
+  border-top: 1px solid #edf2f0;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  column-gap: 15px;
+
+  row-gap: 2px;
+}
+
+
+/* =========================================================
+   PASSWORD FIELD
+========================================================= */
+
+.password-field {
+  margin-bottom: 13px;
+
+  min-width: 0;
+}
+
+.password-field:nth-child(3) {
+  grid-column: 1 / -1;
+
+  max-width: calc(50% - 7.5px);
+}
+
+
+/* =========================================================
+   PASSWORD LABEL
+========================================================= */
+
+.password-field label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #234a43;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PASSWORD INPUT
+========================================================= */
+
+.password-input {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+.password-input > svg {
+  position: absolute;
+
+  left: 12px;
+
+  color: #087f70;
+
+  font-size: 13px;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+.password-input input {
+  width: 100%;
+
+  height: 40px;
+
+  padding: 0 40px 0 35px;
+
+  border: 1px solid #d8e8e3;
+
+  border-radius: 8px;
+
+  background: #fbfdfc;
+
+  color: #183f3a;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 11px;
+
+  outline: none;
+
+  transition: all 0.2s ease;
+}
+
+.password-input input::placeholder {
+  color: #9aaea9;
+}
+
+.password-input input:hover {
+  border-color: #bddbd3;
+
+  background: #ffffff;
+}
+
+.password-input input:focus {
+  border-color: #15927f;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(21, 146, 127, 0.08);
+}
+
+
+/* =========================================================
+   SHOW / HIDE PASSWORD BUTTON
+========================================================= */
+
+.password-input button {
+  position: absolute;
+
+  right: 8px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 27px;
+  height: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: #718680;
+
+  cursor: pointer;
+
+  padding: 0;
+
+  font-size: 12px;
+
+  transition: 0.2s;
+}
+
+.password-input button:hover {
+  background: #eaf7f3;
+
+  color: #087f70;
+}
+
+
+/* =========================================================
+   PASSWORD ERROR
+========================================================= */
+
+.password-error {
+  width: 100%;
+
+  grid-column: 1 / -1;
+
+  margin-top: 0;
+
+  margin-bottom: 4px;
+
+  padding: 8px 11px;
+
+  border-radius: 7px;
+
+  background: #fff1ef;
+
+  border: 1px solid #f0d0cc;
+
+  color: #b33b32;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   PASSWORD SUCCESS
+========================================================= */
+
+.password-success {
+  width: 100%;
+
+  grid-column: 1 / -1;
+
+  margin-top: 0;
+
+  margin-bottom: 4px;
+
+  padding: 8px 11px;
+
+  border-radius: 7px;
+
+  background: #eaf8f2;
+
+  border: 1px solid #c9e9dc;
+
+  color: #087653;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   PASSWORD ACTIONS
+========================================================= */
+
+.password-actions {
+  grid-column: 1 / -1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  gap: 9px;
+
+  margin-top: 2px;
+}
+
+
+/* =========================================================
+   CANCEL BUTTON
+========================================================= */
+
+.password-cancel-btn {
+  height: 38px;
+
+  padding: 0 17px;
+
+  border: 1px solid #d5e5e1;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #496762;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.password-cancel-btn:hover {
+  background: #f3f9f7;
+
+  border-color: #bcd8d1;
+
+  color: #087f70;
+}
+
+
+/* =========================================================
+   UPDATE PASSWORD BUTTON
+========================================================= */
+
+.password-save-btn {
+  height: 38px;
+
+  padding: 0 17px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #087f70,
+      #0b9b83
+    );
+
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 650;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 10px rgba(8, 127, 112, 0.14);
+
+  transition: all 0.2s ease;
+}
+
+.password-save-btn svg {
+  font-size: 10px;
+}
+
+.password-save-btn:hover {
+  background:
+    linear-gradient(
+      135deg,
+      #056d60,
+      #087f70
+    );
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 6px 14px rgba(8, 127, 112, 0.18);
+}
+
+.password-save-btn:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.logout-link {
+  width: 125px;
+
+  height: 38px;
+
+  border: 1px solid #e4caca;
+
+  background: #ffffff;
+
+  color: #a65b5b;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  margin: 25px auto 15px;
+
+  padding: 0;
+
+  border-radius: 8px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.logout-link svg {
+  font-size: 12px;
+}
+
+.logout-link:hover {
+  background: #fff2f2;
+
+  border-color: #e0b9b9;
+
+  color: #c43d3d;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 4px 10px rgba(160, 70, 70, 0.08);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.profile-footer {
+  text-align: center;
+
+  color: #a0aaa5;
+
+  font-size: 8px;
+
+  margin-top: 4px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 750px) {
+
+  .profile-topbar {
+    padding: 0 20px;
+  }
+
+  .profile-container {
+    width: calc(100% - 28px);
+
+    margin-top: 17px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    min-height: 72px;
+  }
+
+  .security-section {
+    padding: 20px;
+  }
+
+  .security-header {
+    flex-wrap: wrap;
+  }
+
+  .change-password-btn {
+    margin-left: 52px;
+  }
+
+  .profile-organization-text strong {
+    max-width: 190px;
+  }
+
+
+  /* PASSWORD FORM */
+
+  .password-form {
+    grid-template-columns: 1fr;
+
+    column-gap: 0;
+  }
+
+  .password-field:nth-child(3) {
+    grid-column: auto;
+
+    max-width: 100%;
+  }
+
+  .password-actions {
+    grid-column: auto;
+  }
+
+  .password-error,
+  .password-success {
+    grid-column: auto;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+  .profile-topbar {
+    height: 58px;
+
+    padding: 0 12px;
+  }
+
+  .back-button {
+    padding: 6px;
+
+    font-size: 0;
+  }
+
+  .back-button svg {
+    font-size: 14px;
+  }
+
+  .page-title {
+    font-size: 13px;
+  }
+
+  .profile-container {
+    width: calc(100% - 20px);
+
+    margin: 13px auto 25px;
+  }
+
+  .profile-identity {
+    padding: 14px;
+
+    border-radius: 14px;
+  }
+
+  .profile-avatar {
+    width: 52px;
+    height: 52px;
+
+    min-width: 52px;
+
+    border-radius: 14px;
+
+    font-size: 21px;
+  }
+
+  .identity-content h1 {
+    font-size: 19px;
+  }
+
+  .identity-content p {
+    font-size: 9px;
+
+    max-width: 170px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+  }
+
+  .profile-organization {
+    margin-top: 6px;
+
+    max-width: 170px;
+  }
+
+  .profile-organization-text {
+    min-width: 0;
+  }
+
+  .profile-organization-text strong {
+    max-width: 125px;
+  }
+
+  .member-status {
+    padding: 6px 8px;
+
+    font-size: 8px;
+  }
+
+
+  /* =====================================================
+     CARBON
+  ===================================================== */
+
+  .carbon-card {
+    height: 100px;
+
+    padding: 17px;
+
+    border-radius: 14px;
+  }
+
+  .carbon-icon {
+    width: 42px;
+    height: 42px;
+
+    min-width: 42px;
+
+    font-size: 18px;
+  }
+
+  .carbon-number {
+    font-size: 25px;
+  }
+
+  .carbon-number small {
+    font-size: 9px;
+  }
+
+  .carbon-decoration {
+    right: 15px;
+
+    font-size: 55px;
+  }
+
+
+  /* =====================================================
+     STATISTICS
+  ===================================================== */
+
+  .stats-grid {
+    gap: 8px;
+
+    margin-bottom: 18px;
+  }
+
+  .stat-card {
+    padding: 11px;
+  }
+
+
+  /* =====================================================
+     LATEST
+  ===================================================== */
+
+  .section-header h2 {
+    font-size: 14px;
+  }
+
+  .section-header p {
+    font-size: 8px;
+  }
+
+  .view-history {
+    font-size: 8px;
+
+    padding: 6px 8px;
+  }
+
+
+  /* =====================================================
+     ACCOUNT SECURITY MOBILE
+  ===================================================== */
+
+  .security-section {
+    margin-top: 18px;
+
+    padding: 17px;
+
+    border-radius: 14px;
+  }
+
+  .security-header {
+    align-items: flex-start;
+
+    gap: 9px;
+  }
+
+  .security-icon {
+    width: 34px;
+    height: 34px;
+
+    min-width: 34px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+  }
+
+  .security-header h2 {
+    font-size: 17px;
+  }
+
+  .security-header p {
+    font-size: 9px;
+
+    margin-top: 4px;
+  }
+
+  .change-password-btn {
+    width: 100%;
+
+    height: 36px;
+
+    margin-left: 43px;
+
+    margin-top: 5px;
+
+    font-size: 9px;
+  }
+
+
+  /* PASSWORD FORM */
+
+  .password-form {
+    margin-top: 15px;
+
+    padding-top: 15px;
+
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+  .password-field {
+    margin-bottom: 12px;
+  }
+
+  .password-field:nth-child(3) {
+    max-width: 100%;
+  }
+
+  .password-field label {
+    font-size: 9px;
+  }
+
+  .password-input input {
+    height: 38px;
+
+    font-size: 10px;
+  }
+
+  .password-input > svg {
+    font-size: 12px;
+  }
+
+  .password-input button {
+    width: 25px;
+    height: 25px;
+
+    font-size: 11px;
+  }
+
+  .password-actions {
+    width: 100%;
+
+    margin-top: 3px;
+
+    gap: 8px;
+  }
+
+  .password-cancel-btn,
+  .password-save-btn {
+    height: 37px;
+
+    flex: 1;
+
+    padding: 0 10px;
+
+    font-size: 9px;
+  }
+
+  .password-error,
+  .password-success {
+    font-size: 9px;
+
+    padding: 8px 10px;
+  }
+
+
+  /* =====================================================
+     LOGOUT MOBILE
+  ===================================================== */
+
+  .logout-link {
+    width: 115px;
+
+    height: 36px;
+
+    font-size: 10px;
+
+    margin-top: 22px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .member-status span {
+    display: none;
+  }
+
+  .member-status {
+    width: 27px;
+    height: 27px;
+
+    justify-content: center;
+
+    padding: 0;
+  }
+
+  .profile-identity {
+    gap: 10px;
+  }
+
+  .profile-organization {
+    max-width: 145px;
+  }
+
+  .profile-organization-text {
+    gap: 3px;
+  }
+
+  .profile-organization-text span {
+    font-size: 7px;
+  }
+
+  .profile-organization-text strong {
+    max-width: 105px;
+
+    font-size: 8px;
+  }
+
+  .carbon-left {
+    gap: 10px;
+  }
+
+  .card-label {
+    font-size: 7px;
+  }
+
+  .carbon-number {
+    font-size: 23px;
+  }
+
+  .security-section {
+    padding: 14px;
+  }
+
+  .security-header h2 {
+    font-size: 16px;
+  }
+
+  .change-password-btn {
+    margin-left: 43px;
+
+    font-size: 8px;
+  }
+
+  .logout-link {
+    width: 110px;
+
+    height: 35px;
+  }
+}

@@ -1,0 +1,599 @@
+.organization-register-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f5faf6;
+  font-family: inherit;
+}
+
+/* =====================================================
+   LEFT SIDE
+===================================================== */
+
+.organization-register-left {
+  width: 48%;
+  min-height: 100vh;
+  padding: 45px 65px;
+  background: linear-gradient(
+    145deg,
+    #e9f7ec,
+    #f7fcf8
+  );
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.organization-register-left::before,
+.organization-register-left::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(46, 125, 50, 0.1);
+}
+
+.organization-register-left::before {
+  width: 350px;
+  height: 350px;
+  top: -140px;
+  left: -120px;
+}
+
+.organization-register-left::after {
+  width: 450px;
+  height: 450px;
+  bottom: -230px;
+  right: -180px;
+}
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.organization-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2e7d32;
+  font-size: 25px;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+.organization-brand svg {
+  font-size: 28px;
+}
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+.organization-left-content {
+  max-width: 560px;
+  margin: auto 0;
+  position: relative;
+  z-index: 2;
+}
+
+.organization-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 18px;
+  background: #2e7d32;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+  box-shadow: 0 12px 30px rgba(46, 125, 50, 0.18);
+}
+
+.organization-left-content h1 {
+  font-size: 43px;
+  line-height: 1.15;
+  color: #173b1c;
+  margin: 0 0 20px;
+}
+
+.organization-left-content h1 span {
+  display: block;
+  color: #2e7d32;
+}
+
+.organization-left-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #607064;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.organization-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.organization-benefits div {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #3f5143;
+  font-size: 14px;
+}
+
+.organization-benefits svg {
+  color: #43a047;
+  font-size: 16px;
+}
+
+/* =====================================================
+   RIGHT SIDE
+===================================================== */
+
+.organization-register-right {
+  width: 52%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: #ffffff;
+}
+
+.organization-register-card {
+  width: 100%;
+  max-width: 470px;
+}
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.organization-back-btn {
+  border: none;
+  background: transparent;
+  color: #5f7062;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  font-size: 13px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.organization-back-btn:hover {
+  color: #2e7d32;
+}
+
+/* =====================================================
+   FORM HEADER
+===================================================== */
+
+.organization-form-header {
+  margin-bottom: 28px;
+}
+
+.organization-form-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: #e9f6eb;
+  color: #2e7d32;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.organization-form-header h2 {
+  margin: 0 0 8px;
+  color: #203524;
+  font-size: 28px;
+}
+
+.organization-form-header p {
+  margin: 0;
+  color: #78847a;
+  font-size: 14px;
+}
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.organization-input-group {
+  margin-bottom: 18px;
+}
+
+.organization-input-group label {
+  display: block;
+  color: #334637;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.organization-input-wrapper {
+  height: 50px;
+  border: 1px solid #dce6de;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  gap: 10px;
+  transition: 0.2s ease;
+  background: #ffffff;
+  position: relative;
+}
+
+.organization-input-wrapper:focus-within {
+  border-color: #4caf50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.08);
+}
+
+.organization-input-wrapper > svg {
+  color: #7a897d;
+  font-size: 15px;
+}
+
+.organization-input-wrapper input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  height: 100%;
+  font-size: 14px;
+  color: #253528;
+  min-width: 0;
+}
+
+.organization-input-wrapper input::placeholder {
+  color: #a2aca4;
+}
+
+/* =====================================================
+   PASSWORD TOGGLE
+   ONLY ONE CUSTOM EYE
+===================================================== */
+
+.password-toggle {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #7c897e;
+  cursor: pointer;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+}
+
+.password-toggle:hover {
+  color: #2e7d32;
+}
+
+.password-toggle:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* =====================================================
+   IMPORTANT:
+   HIDE EDGE / BROWSER DEFAULT PASSWORD EYE
+   So only ONE eye is visible.
+===================================================== */
+
+.organization-register-page
+input[type="password"]::-ms-reveal,
+.organization-register-page
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+.organization-register-page
+input[type="password"]::-webkit-credentials-auto-fill-button {
+  display: none !important;
+}
+
+.organization-register-page
+input[type="password"]::-webkit-textfield-decoration-container {
+  display: none;
+}
+
+/* =====================================================
+   ERROR / SUCCESS
+===================================================== */
+
+.organization-error {
+  background: #fff1f1;
+  border: 1px solid #f1cccc;
+  color: #c62828;
+  border-radius: 9px;
+  padding: 11px 13px;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.organization-success {
+  background: #edf8ef;
+  border: 1px solid #cce8d0;
+  color: #2e7d32;
+  border-radius: 9px;
+  padding: 11px 13px;
+  font-size: 13px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* =====================================================
+   REGISTER BUTTON
+===================================================== */
+
+.organization-register-btn {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background: #2e7d32;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.25s ease;
+}
+
+.organization-register-btn:hover {
+  background: #256b29;
+  transform: translateY(-1px);
+}
+
+.organization-register-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =====================================================
+   LOGIN LINK
+===================================================== */
+
+.organization-login-link {
+  text-align: center;
+  color: #78847a;
+  font-size: 13px;
+  margin-top: 22px;
+}
+
+.organization-login-link button {
+  border: none;
+  background: transparent;
+  color: #2e7d32;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.organization-login-link button:hover {
+  text-decoration: underline;
+}
+
+/* =====================================================
+   REGISTER / LOGIN BLOCKS
+===================================================== */
+
+.organization-auth-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.organization-auth-block {
+  min-height: 72px;
+  border: 1px solid #dce6de;
+  border-radius: 12px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 15px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: #536257;
+}
+
+.organization-auth-block > svg {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 10px;
+  background: #f1f8f2;
+  color: #6f7f72;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.organization-auth-block div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.organization-auth-block strong {
+  font-size: 14px;
+  font-weight: 700;
+  color: #334637;
+}
+
+.organization-auth-block span {
+  font-size: 11px;
+  color: #879289;
+  line-height: 1.3;
+}
+
+.organization-auth-block:hover {
+  border-color: #81c784;
+  background: #fbfefb;
+  transform: translateY(-1px);
+}
+
+.organization-auth-block.active {
+  border-color: #2e7d32;
+  background: #edf8ef;
+  box-shadow: 0 5px 15px rgba(46, 125, 50, 0.08);
+}
+
+.organization-auth-block.active > svg {
+  background: #2e7d32;
+  color: #ffffff;
+}
+
+.organization-auth-block.active strong {
+  color: #2e7d32;
+}
+
+/* =====================================================
+   ORGANIZATION LOGIN PANEL
+===================================================== */
+
+.organization-login-panel {
+  text-align: center;
+  padding: 28px 10px 10px;
+}
+
+.organization-login-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 18px;
+  background: #e9f6eb;
+  color: #2e7d32;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin: 0 auto 20px;
+}
+
+.organization-login-panel h2 {
+  margin: 0 0 10px;
+  color: #203524;
+  font-size: 27px;
+}
+
+.organization-login-panel p {
+  max-width: 360px;
+  margin: 0 auto 25px;
+  color: #78847a;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =====================================================
+   GO TO EXISTING LOGIN BUTTON
+===================================================== */
+
+.organization-login-page-btn {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background: #2e7d32;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  transition: 0.25s ease;
+}
+
+.organization-login-page-btn:hover {
+  background: #256b29;
+  transform: translateY(-1px);
+}
+
+.organization-login-page-btn svg {
+  font-size: 14px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+  .organization-register-page {
+    flex-direction: column;
+  }
+
+  .organization-register-left,
+  .organization-register-right {
+    width: 100%;
+  }
+
+  .organization-register-left {
+    min-height: auto;
+    padding: 35px;
+  }
+
+  .organization-left-content {
+    margin: 55px 0 20px;
+  }
+
+  .organization-left-content h1 {
+    font-size: 34px;
+  }
+
+  .organization-register-right {
+    min-height: auto;
+    padding: 45px 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .organization-register-left {
+    padding: 25px 20px;
+  }
+
+  .organization-left-content h1 {
+    font-size: 29px;
+  }
+
+  .organization-register-right {
+    padding: 35px 20px;
+  }
+
+  .organization-form-header h2 {
+    font-size: 24px;
+  }
+
+  .organization-auth-blocks {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+
+  .organization-auth-block {
+    min-height: 65px;
+  }
+
+  .organization-login-panel {
+    padding-top: 20px;
+  }
+}

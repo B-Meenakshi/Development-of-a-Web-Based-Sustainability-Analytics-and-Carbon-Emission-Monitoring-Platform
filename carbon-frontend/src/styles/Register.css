@@ -1,0 +1,1417 @@
+/* =========================================================
+   CARBONTRACK REGISTER PAGE
+   FULL PAGE — NO OUTER CARD
+   WHITE + GREEN ECO THEME
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   MAIN PAGE
+   ========================================================= */
+
+.register-container {
+  width: 100%;
+  min-height: 100vh;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+
+  background:
+    radial-gradient(
+      circle at 8% 8%,
+      rgba(255, 255, 255, 0.9),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 95% 90%,
+      rgba(65, 171, 89, 0.25),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #eefaf1 0%,
+      #d5efdb 42%,
+      #9bd5a8 72%,
+      #4aa965 100%
+    );
+}
+
+
+/* =========================================================
+   BACKGROUND CIRCLES
+   ========================================================= */
+
+.register-container::before {
+  content: "";
+
+  position: absolute;
+
+  width: 560px;
+  height: 560px;
+
+  left: -330px;
+  top: -290px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(44, 133, 63, 0.10);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.60),
+      transparent 70%
+    );
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+.register-container::after {
+  content: "";
+
+  position: absolute;
+
+  width: 680px;
+  height: 680px;
+
+  right: -390px;
+  bottom: -430px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(13, 94, 40, 0.30),
+      transparent 70%
+    );
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+/* =========================================================
+   DECORATIVE LEAVES
+   ========================================================= */
+
+.leaf {
+  position: absolute;
+
+  z-index: 1;
+
+  pointer-events: none;
+  user-select: none;
+
+  color: rgba(40, 137, 62, 0.13);
+}
+
+
+.leaf1 {
+  top: 3%;
+  left: 3%;
+
+  font-size: 70px;
+
+  transform: rotate(-25deg);
+}
+
+
+.leaf2 {
+  top: 5%;
+  right: 3%;
+
+  font-size: 75px;
+
+  transform: rotate(25deg);
+}
+
+
+.leaf3 {
+  bottom: 3%;
+  left: 4%;
+
+  font-size: 75px;
+
+  transform: rotate(20deg);
+}
+
+
+.leaf4 {
+  bottom: 3%;
+  right: 4%;
+
+  font-size: 75px;
+
+  transform: rotate(-25deg);
+}
+
+
+.leaf5,
+.leaf6 {
+  display: none;
+}
+
+
+/* =========================================================
+   MAIN TWO-COLUMN AREA
+   ========================================================= */
+
+.register-card {
+  width: 100%;
+  min-height: 100vh;
+
+  position: relative;
+
+  z-index: 5;
+
+  display: grid;
+
+  grid-template-columns: 48% 52%;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 0;
+
+  background: transparent;
+
+  box-shadow: none;
+
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+
+/* =========================================================
+   LEFT SIDE
+   ========================================================= */
+
+.register-branding {
+  grid-column: 1;
+
+  width: 100%;
+  min-height: 100vh;
+
+  position: relative;
+
+  /* MOVED UP */
+  padding: 24px 65px 35px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 5% 5%,
+      rgba(255, 255, 255, 0.95),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 95% 95%,
+      rgba(102, 194, 121, 0.18),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #f4fbf5 0%,
+      #e5f6e9 55%,
+      #d5efdb 100%
+    );
+}
+
+
+/* =========================================================
+   LEFT DECORATIVE CIRCLES
+   ========================================================= */
+
+.register-branding::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  left: -210px;
+  top: -205px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(45, 138, 66, 0.10);
+
+  pointer-events: none;
+}
+
+
+.register-branding::after {
+  content: "";
+
+  position: absolute;
+
+  width: 470px;
+  height: 470px;
+
+  right: -270px;
+  bottom: -330px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(45, 138, 66, 0.09);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   EARTH IMAGE
+   ========================================================= */
+
+.earth-wrapper {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  /* MOVED UP */
+  margin-top: 0;
+
+  /* LESS SPACE BELOW EARTH */
+  margin-bottom: 27px;
+
+  position: relative;
+
+  z-index: 5;
+}
+
+
+.earth-image {
+  width: 145px;
+  height: 145px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 6px solid #ffffff;
+
+  box-shadow:
+    0 16px 35px rgba(35, 116, 54, 0.20),
+    0 0 0 10px rgba(64, 164, 84, 0.08),
+    0 0 35px rgba(64, 164, 84, 0.10);
+
+  transition: 0.25s ease;
+}
+
+
+.earth-image:hover {
+  transform: scale(1.03);
+}
+
+
+/* =========================================================
+   CREATE ACCOUNT HEADING
+   ========================================================= */
+
+.register-branding h2 {
+  position: relative;
+
+  z-index: 5;
+
+  color: #123f22;
+
+  font-size: 43px;
+
+  line-height: 1.05;
+
+  font-weight: 750;
+
+  letter-spacing: -1.5px;
+
+  /* SMALLER SPACE BELOW */
+  margin-bottom: 9px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   LEFT SUBTITLE
+   ========================================================= */
+
+.subtitle {
+  position: relative;
+
+  z-index: 5;
+
+  color: #62766a;
+
+  font-size: 16px;
+
+  line-height: 1.55;
+
+  margin-bottom: 0;
+
+  max-width: 390px;
+}
+
+
+/* =========================================================
+   SUSTAINABLE LIVING PANEL
+   ========================================================= */
+
+.eco-panel {
+  width: 100%;
+
+  max-width: 460px;
+
+  position: relative;
+
+  z-index: 5;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  border-radius: 21px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(231, 249, 235, 0.98),
+      rgba(211, 240, 218, 0.94)
+    );
+
+  border: 1px solid rgba(88, 174, 105, 0.18);
+
+  box-shadow:
+    0 10px 25px rgba(35, 110, 55, 0.08);
+
+  /* MOVED UP */
+  margin-top: 32px;
+
+  padding: 23px 21px 17px;
+}
+
+
+/* =========================================================
+   PANEL DECORATIVE CIRCLE
+   ========================================================= */
+
+.eco-panel::before {
+  content: "";
+
+  position: absolute;
+
+  width: 170px;
+  height: 170px;
+
+  right: -75px;
+  top: -85px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(76, 184, 99, 0.14);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   ECO BADGE
+   ========================================================= */
+
+.eco-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 6px 13px;
+
+  border-radius: 20px;
+
+  background:
+    rgba(255, 255, 255, 0.90);
+
+  color: #267440;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  margin-bottom: 10px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   PANEL TITLE
+   ========================================================= */
+
+.eco-panel h3 {
+  color: #185e31;
+
+  font-size: 20px;
+
+  line-height: 1.2;
+
+  font-weight: 750;
+
+  margin-bottom: 7px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   PANEL DESCRIPTION
+   ========================================================= */
+
+.eco-panel > p {
+  color: #65776a;
+
+  font-size: 11.5px;
+
+  line-height: 1.5;
+
+  margin: 0 auto 16px;
+
+  max-width: 390px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   THREE SMALL CARDS
+   ========================================================= */
+
+.eco-stats {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 8px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+.eco-stat {
+  min-height: 86px;
+
+  padding: 9px 5px;
+
+  border-radius: 12px;
+
+  background:
+    rgba(255, 255, 255, 0.86);
+
+  border: 1px solid rgba(255, 255, 255, 0.90);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 3px;
+
+  transition: 0.2s ease;
+}
+
+
+.eco-stat:hover {
+  transform: translateY(-2px);
+
+  background: #ffffff;
+
+  box-shadow:
+    0 7px 16px rgba(35, 110, 55, 0.08);
+}
+
+
+.eco-stat span {
+  font-size: 19px;
+
+  line-height: 1;
+
+  margin-bottom: 3px;
+}
+
+
+.eco-stat strong {
+  color: #286c3e;
+
+  font-size: 11px;
+
+  line-height: 1.2;
+
+  font-weight: 750;
+}
+
+
+.eco-stat small {
+  color: #7b887f;
+
+  font-size: 8.5px;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   QUOTE
+   ========================================================= */
+
+.eco-quote {
+  margin-top: 11px;
+
+  padding-top: 10px;
+
+  border-top:
+    1px solid rgba(65, 135, 79, 0.14);
+
+  color: #5f7665;
+
+  font-size: 10px;
+
+  font-style: italic;
+
+  line-height: 1.4;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   RIGHT FORM SECTION
+   ========================================================= */
+
+.register-form-section {
+  grid-column: 2;
+
+  width: 100%;
+  min-height: 100vh;
+
+  position: relative;
+
+  z-index: 6;
+
+  padding: 56px 8.5% 45px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-start;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   FORM HEADING
+   ========================================================= */
+
+.form-heading {
+  width: 100%;
+
+  margin-top: 0;
+
+  margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   GET STARTED
+   ========================================================= */
+
+.form-label {
+  display: inline-block;
+
+  color: #2d9147;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   RIGHT TITLE
+   ========================================================= */
+
+.form-heading h1 {
+  color: #123f22;
+
+  font-size: 32px;
+
+  line-height: 1.12;
+
+  font-weight: 750;
+
+  letter-spacing: -1px;
+
+  margin-bottom: 9px;
+}
+
+
+/* =========================================================
+   RIGHT DESCRIPTION
+   ========================================================= */
+
+.form-heading p {
+  color: #78867d;
+
+  font-size: 14px;
+
+  line-height: 1.55;
+
+  max-width: 650px;
+}
+
+
+/* =========================================================
+   REGISTER FORM
+   ========================================================= */
+
+.register-form {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 17px 18px;
+}
+
+
+/* =========================================================
+   FULL WIDTH
+   ========================================================= */
+
+.full-width-field {
+  grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   FORM FIELD
+   ========================================================= */
+
+.form-field,
+.password-container {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+.form-field label,
+.password-container label {
+  color: #183f25;
+
+  font-size: 13px;
+
+  font-weight: 650;
+
+  margin-left: 1px;
+}
+
+
+/* =========================================================
+   INPUT
+   ========================================================= */
+
+.input-box {
+  width: 100%;
+
+  height: 59px;
+
+  padding: 0 18px;
+
+  border: 1px solid #d7e4da;
+
+  border-radius: 11px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #263c2d;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.input-box::placeholder {
+  color: #9aa69f;
+
+  font-size: 13px;
+
+  font-weight: 400;
+}
+
+
+.input-box:hover {
+  border-color: #a8c9b1;
+}
+
+
+.input-box:focus {
+  border-color: #319452;
+
+  box-shadow:
+    0 0 0 3px rgba(49, 148, 82, 0.08);
+}
+
+
+/* =========================================================
+   PASSWORD
+   ========================================================= */
+
+.password-container {
+  position: relative;
+}
+
+
+.password-container .input-box {
+  padding-right: 48px;
+}
+
+
+.password-container button,
+.password-container .password-toggle,
+.password-container .toggle-password {
+  position: absolute;
+
+  right: 14px;
+
+  bottom: 15px;
+
+  width: 28px;
+
+  height: 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #7a897f;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   CREATE ACCOUNT BUTTON
+   ========================================================= */
+
+.register-btn {
+  grid-column: 1 / -1;
+
+  width: 100%;
+
+  height: 59px;
+
+  margin-top: 4px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #49bd68 0%,
+      #29964e 52%,
+      #176737 100%
+    );
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 11px 25px rgba(30, 112, 51, 0.20);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.register-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 15px 29px rgba(30, 112, 51, 0.26);
+}
+
+
+.register-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   BUTTON ARROW
+   ========================================================= */
+
+.button-arrow {
+  display: inline-block;
+
+  margin-left: 8px;
+
+  font-size: 17px;
+
+  transition: 0.2s ease;
+}
+
+
+.register-btn:hover .button-arrow {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   LOGIN LINK
+   ========================================================= */
+
+.login-link {
+  width: 100%;
+
+  text-align: center;
+
+  color: #7b8880;
+
+  font-size: 13px;
+
+  margin-top: 18px;
+}
+
+
+.login-link span {
+  margin-left: 5px;
+
+  color: #24783a;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+.login-link span:hover {
+  color: #2d963f;
+
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   1100px
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .register-card {
+    grid-template-columns: 46% 54%;
+  }
+
+
+  .register-branding {
+    padding-left: 42px;
+    padding-right: 42px;
+    padding-top: 22px;
+  }
+
+
+  .register-branding h2 {
+    font-size: 37px;
+  }
+
+
+  .earth-image {
+    width: 125px;
+    height: 125px;
+  }
+
+
+  .earth-wrapper {
+    margin-bottom: 24px;
+  }
+
+
+  .eco-panel {
+    margin-top: 29px;
+  }
+
+
+  .register-form-section {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+
+  .form-heading h1 {
+    font-size: 29px;
+  }
+}
+
+
+/* =========================================================
+   850px
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .register-card {
+    grid-template-columns: 44% 56%;
+  }
+
+
+  .register-branding {
+    padding: 20px 28px 30px;
+  }
+
+
+  .register-branding h2 {
+    font-size: 31px;
+
+    white-space: normal;
+  }
+
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+
+  .earth-image {
+    width: 110px;
+    height: 110px;
+  }
+
+
+  .earth-wrapper {
+    margin-bottom: 23px;
+  }
+
+
+  .eco-panel {
+    margin-top: 27px;
+
+    padding: 19px 14px 15px;
+  }
+
+
+  .eco-panel h3 {
+    font-size: 17px;
+  }
+
+
+  .eco-panel > p {
+    font-size: 10px;
+  }
+
+
+  .eco-stat {
+    min-height: 75px;
+  }
+
+
+  .eco-stat span {
+    font-size: 17px;
+  }
+
+
+  .eco-stat strong {
+    font-size: 10px;
+  }
+
+
+  .eco-stat small {
+    font-size: 8px;
+  }
+
+
+  .register-form-section {
+    padding: 45px 5% 40px;
+  }
+
+
+  .form-heading h1 {
+    font-size: 27px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .register-container {
+    display: block;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    overflow-y: auto;
+  }
+
+
+  .register-card {
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+  }
+
+
+  /* =======================================================
+     LEFT
+     ======================================================= */
+
+  .register-branding {
+    width: 100%;
+
+    min-height: auto;
+
+    padding: 25px 22px 30px;
+
+    align-items: center;
+
+    text-align: center;
+  }
+
+
+  .earth-wrapper {
+    margin-top: 0;
+
+    margin-bottom: 20px;
+  }
+
+
+  .earth-image {
+    width: 105px;
+
+    height: 105px;
+  }
+
+
+  .register-branding h2 {
+    font-size: 32px;
+
+    line-height: 1.08;
+
+    white-space: normal;
+
+    margin-bottom: 9px;
+  }
+
+
+  .subtitle {
+    font-size: 14px;
+
+    max-width: 330px;
+  }
+
+
+  .eco-panel {
+    max-width: 440px;
+
+    margin-top: 23px;
+
+    padding: 20px 14px 16px;
+  }
+
+
+  .eco-panel h3 {
+    font-size: 18px;
+  }
+
+
+  .eco-panel > p {
+    font-size: 10.5px;
+  }
+
+
+  /* =======================================================
+     RIGHT
+     ======================================================= */
+
+  .register-form-section {
+    width: 100%;
+
+    min-height: auto;
+
+    padding: 35px 22px 40px;
+
+    background: #ffffff;
+  }
+
+
+  .form-heading {
+    margin-bottom: 22px;
+  }
+
+
+  .form-heading h1 {
+    font-size: 27px;
+  }
+
+
+  .form-heading p {
+    font-size: 13px;
+  }
+
+
+  .register-form {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+
+  .full-width-field {
+    grid-column: auto;
+  }
+
+
+  .input-box {
+    height: 54px;
+  }
+
+
+  .register-btn {
+    grid-column: auto;
+
+    height: 54px;
+  }
+
+
+  .login-link {
+    margin-top: 17px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .register-branding {
+    padding: 23px 17px 27px;
+  }
+
+
+  .earth-image {
+    width: 90px;
+
+    height: 90px;
+  }
+
+
+  .earth-wrapper {
+    margin-bottom: 18px;
+  }
+
+
+  .register-branding h2 {
+    font-size: 28px;
+  }
+
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+
+  .eco-panel {
+    margin-top: 20px;
+
+    padding: 18px 10px 15px;
+  }
+
+
+  .eco-badge {
+    font-size: 10px;
+
+    padding: 5px 10px;
+  }
+
+
+  .eco-panel h3 {
+    font-size: 17px;
+  }
+
+
+  .eco-panel > p {
+    font-size: 9.5px;
+  }
+
+
+  .eco-stats {
+    gap: 5px;
+  }
+
+
+  .eco-stat {
+    min-height: 70px;
+
+    padding: 6px 3px;
+  }
+
+
+  .eco-stat span {
+    font-size: 15px;
+  }
+
+
+  .eco-stat strong {
+    font-size: 9px;
+  }
+
+
+  .eco-stat small {
+    font-size: 7.5px;
+  }
+
+
+  .eco-quote {
+    font-size: 8.5px;
+  }
+
+
+  .register-form-section {
+    padding: 28px 17px 35px;
+  }
+
+
+  .form-heading h1 {
+    font-size: 24px;
+  }
+
+
+  .form-heading p {
+    font-size: 12px;
+  }
+
+
+  .input-box {
+    height: 52px;
+
+    font-size: 13px;
+  }
+
+
+  .register-btn {
+    height: 52px;
+
+    font-size: 14px;
+  }
+
+
+  .login-link {
+    font-size: 12px;
+  }
+}

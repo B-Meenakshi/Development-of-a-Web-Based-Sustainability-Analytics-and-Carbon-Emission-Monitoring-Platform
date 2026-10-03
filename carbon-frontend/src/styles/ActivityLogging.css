@@ -1,0 +1,1211 @@
+/* =========================================================
+   CARBON TRACK - ACTIVITY LOGGING
+   WHITE + GREEN PROFESSIONAL UI
+   COMPACT EMBEDDED DASHBOARD DESIGN
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.activity-embedded-page {
+  width: 100%;
+  min-height: 100%;
+  padding: 6px 4px 20px;
+  animation: activityPageOpen 0.3s ease;
+}
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.activity-modal {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+
+  background: #ffffff;
+
+  border: 1px solid #dcefe3;
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 28px rgba(22, 101, 52, 0.07);
+
+  overflow: hidden;
+
+  animation: activityCardOpen 0.3s ease;
+
+  scrollbar-width: thin;
+  scrollbar-color: #b9ddc2 transparent;
+}
+
+.activity-modal::-webkit-scrollbar {
+  width: 4px;
+}
+
+.activity-modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.activity-modal::-webkit-scrollbar-thumb {
+  background: #b9ddc2;
+  border-radius: 10px;
+}
+
+.activity-modal::-webkit-scrollbar-thumb:hover {
+  background: #75c58b;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.activity-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f4fbf6 100%
+    );
+
+  border-bottom: 1px solid #e4f1e8;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.activity-modal-title {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+/* =========================================================
+   TITLE ICON
+========================================================= */
+
+.activity-modal-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #dcfce7,
+      #ecfdf5
+    );
+
+  color: #15803d;
+
+  font-size: 19px;
+
+  border: 1px solid #c7ecd3;
+}
+
+.activity-modal-title h2 {
+  margin: 0;
+
+  color: #14532d;
+
+  font-size: 20px;
+  line-height: 1.2;
+
+  font-weight: 700;
+}
+
+.activity-modal-title p {
+  margin: 3px 0 0;
+
+  color: #6b7280;
+
+  font-size: 12px;
+
+  line-height: 1.3;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.activity-modal-form {
+  padding: 18px 24px 22px;
+}
+
+/* =========================================================
+   GENERAL LABEL
+========================================================= */
+
+.activity-modal-form label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #374151;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.section-label {
+  color: #1f2937 !important;
+
+  font-size: 12px !important;
+
+  font-weight: 700 !important;
+}
+
+/* =========================================================
+   CATEGORY SECTION
+========================================================= */
+
+.category-section {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.category-section > label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* =========================================================
+   CATEGORY CARDS
+   UNIQUE CLASS - PREVENTS DASHBOARD CSS CONFLICT
+========================================================= */
+
+.activity-category-cards {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 8px;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   INDIVIDUAL CATEGORY CARD
+========================================================= */
+
+.activity-category-card {
+  width: 100%;
+
+  height: 44px;
+  min-height: 44px;
+  max-height: 44px;
+
+  display: flex;
+
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 0 10px;
+
+  margin: 0;
+
+  background: #ffffff;
+
+  border: 1px solid #dce9df;
+
+  border-radius: 9px;
+
+  color: #374151;
+
+  font-family: inherit;
+
+  font-size: 11.5px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  appearance: none;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* =========================================================
+   CATEGORY HOVER
+========================================================= */
+
+.activity-category-card:hover {
+  background: #f7fcf8;
+
+  border-color: #9bd7ad;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 3px 8px rgba(22, 101, 52, 0.07);
+}
+
+/* =========================================================
+   ACTIVE CATEGORY
+========================================================= */
+
+.activity-category-card.active {
+  background:
+    linear-gradient(
+      135deg,
+      #ecfdf3,
+      #dcfce7
+    );
+
+  border-color: #4ade80;
+
+  color: #166534;
+
+  box-shadow:
+    0 3px 9px rgba(34, 197, 94, 0.10);
+}
+
+/* =========================================================
+   CATEGORY ICON
+========================================================= */
+
+.activity-category-card-icon {
+  width: 18px;
+  height: 18px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #16a34a;
+
+  font-size: 16px;
+
+  line-height: 1;
+}
+
+.activity-category-card.active
+.activity-category-card-icon {
+  color: #15803d;
+}
+
+/* =========================================================
+   CATEGORY LABEL
+========================================================= */
+
+.activity-category-card-label {
+  display: inline-block;
+
+  margin: 0;
+  padding: 0;
+
+  color: #374151;
+
+  font-size: 11.5px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  text-align: center;
+}
+
+.activity-category-card.active
+.activity-category-card-label {
+  color: #166534;
+}
+
+/* =========================================================
+   ACTIVITY SELECTION
+========================================================= */
+
+.activity-selection {
+  margin-bottom: 15px;
+}
+
+.activity-options {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 8px;
+
+  margin-top: 7px;
+}
+
+.activity-option {
+  min-height: 46px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 8px 10px;
+
+  background: #ffffff;
+
+  border: 1px solid #dce9df;
+
+  border-radius: 9px;
+
+  color: #374151;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    all 0.2s ease;
+}
+
+.activity-option:hover {
+  background: #f3fbf5;
+
+  border-color: #86efac;
+
+  color: #15803d;
+}
+
+.activity-option.selected {
+  background:
+    linear-gradient(
+      135deg,
+      #ecfdf3,
+      #dcfce7
+    );
+
+  border-color: #4ade80;
+
+  color: #166534;
+
+  box-shadow:
+    0 2px 8px rgba(34, 197, 94, 0.08);
+}
+
+/* =========================================================
+   OTHER ACTIVITY BOX
+========================================================= */
+
+.other-activity-box {
+  margin-bottom: 15px;
+
+  padding: 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f8fdf9,
+      #f1faf4
+    );
+
+  border: 1px solid #d7ebdd;
+
+  border-radius: 11px;
+}
+
+.other-box-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 10px;
+
+  color: #166534;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.other-box-title svg {
+  color: #16a34a;
+}
+
+/* =========================================================
+   OTHER FIELDS
+========================================================= */
+
+.other-fields {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 11px;
+}
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+  margin-bottom: 13px;
+}
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  min-height: 40px;
+
+  padding: 8px 11px;
+
+  background: #ffffff;
+
+  border: 1px solid #d3e4d8;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  color: #1f2937;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: #a8d5b5;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #22c55e;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(34, 197, 94, 0.09);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.form-group textarea {
+  min-height: 70px;
+
+  resize: vertical;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+   HELPER TEXT
+========================================================= */
+
+.form-group small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #7a8b80;
+
+  font-size: 10.5px;
+
+  line-height: 1.3;
+}
+
+/* =========================================================
+   OTHER FACTOR INPUT
+========================================================= */
+
+.other-factor-input {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+.other-factor-input input {
+  flex: 1;
+}
+
+.other-factor-input span {
+  flex-shrink: 0;
+
+  color: #6b7280;
+
+  font-size: 10px;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   SAVE CUSTOM ACTIVITY
+========================================================= */
+
+.save-other-button {
+  margin-top: 1px;
+
+  padding: 8px 13px;
+
+  background: #ecfdf3;
+
+  color: #15803d;
+
+  border: 1px solid #b7e5c4;
+
+  border-radius: 7px;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    all 0.2s ease;
+}
+
+.save-other-button:hover {
+  background: #dcfce7;
+
+  border-color: #86efac;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   FORM ROW
+========================================================= */
+
+.form-row {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 13px;
+
+  margin-top: 2px;
+}
+
+/* =========================================================
+   EMISSION BOX
+========================================================= */
+
+.emission-box {
+  margin-top: 2px;
+
+  min-height: 82px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 14px 19px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f0fdf4 0%,
+      #ecfdf5 100%
+    );
+
+  border: 1px solid #bde5c8;
+
+  border-radius: 11px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.emission-box p {
+  margin: 0 0 3px;
+
+  color: #527060;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.emission-box h2 {
+  margin: 0;
+
+  color: #166534;
+
+  font-size: 24px;
+
+  line-height: 1;
+
+  font-weight: 800;
+}
+
+.emission-box h2 span {
+  display: inline-block;
+
+  margin-left: 6px;
+
+  color: #4b7c5c;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  vertical-align: middle;
+}
+
+.emission-box > svg {
+  width: 36px;
+  height: 36px;
+
+  padding: 8px;
+
+  border-radius: 50%;
+
+  background: #dcfce7;
+
+  color: #16a34a;
+
+  font-size: 18px;
+
+  box-sizing: content-box;
+}
+
+/* =========================================================
+   CALCULATION MESSAGE
+========================================================= */
+
+.factor-message {
+  margin: 8px 0 0;
+
+  padding: 8px 11px;
+
+  background: #f7fcf8;
+
+  border-left: 3px solid #22c55e;
+
+  border-radius: 6px;
+
+  color: #39704b;
+
+  font-size: 10.5px;
+
+  line-height: 1.35;
+}
+
+/* =========================================================
+   ACTION AREA
+========================================================= */
+
+.activity-modal-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 17px;
+
+  padding-top: 14px;
+
+  border-top: 1px solid #e7f0e9;
+}
+
+/* =========================================================
+   CANCEL BUTTON
+========================================================= */
+
+.activity-cancel-button {
+  min-height: 38px;
+
+  padding: 8px 17px;
+
+  background: #ffffff;
+
+  color: #4b5563;
+
+  border: 1px solid #d1d9d4;
+
+  border-radius: 8px;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.activity-cancel-button:hover {
+  background: #f8faf9;
+
+  border-color: #aab7ae;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   LOG ACTIVITY BUTTON
+========================================================= */
+
+.log-button {
+  min-height: 40px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 9px 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #22c55e,
+      #16a34a
+    );
+
+  color: #ffffff;
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 14px rgba(22, 163, 74, 0.20);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.log-button svg {
+  font-size: 13px;
+}
+
+.log-button:hover:not(:disabled) {
+  background:
+    linear-gradient(
+      135deg,
+      #16a34a,
+      #15803d
+    );
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 17px rgba(22, 163, 74, 0.26);
+}
+
+.log-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.log-button:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+}
+
+/* =========================================================
+   OLD CLASS SUPPORT
+========================================================= */
+
+.activity-submit-button {
+  min-height: 40px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 9px 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #22c55e,
+      #16a34a
+    );
+
+  color: #ffffff;
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 14px rgba(22, 163, 74, 0.20);
+}
+
+/* =========================================================
+   OLD TITLE ICON SUPPORT
+========================================================= */
+
+.activity-modal-title-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #dcfce7;
+
+  color: #15803d;
+
+  border-radius: 11px;
+
+  font-size: 19px;
+
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   REMOVE OLD MODAL OVERLAY
+========================================================= */
+
+.activity-modal-overlay {
+  position: static;
+
+  width: 100%;
+
+  min-height: auto;
+
+  display: block;
+
+  background: transparent;
+
+  backdrop-filter: none;
+
+  z-index: auto;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes activityPageOpen {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes activityCardOpen {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(7px)
+      scale(0.995);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - 1000px
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .activity-category-cards {
+    grid-template-columns:
+      repeat(5, minmax(0, 1fr));
+
+    gap: 6px;
+  }
+
+  .activity-category-card {
+    padding: 6px 5px;
+
+    gap: 5px;
+  }
+
+  .activity-category-card-label {
+    font-size: 10.5px;
+  }
+
+  .activity-options {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .other-fields {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - 700px
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .activity-embedded-page {
+    padding: 5px 0 18px;
+  }
+
+  .activity-modal {
+    border-radius: 14px;
+  }
+
+  .activity-modal-header {
+    padding: 15px 17px;
+  }
+
+  .activity-modal-form {
+    padding: 16px;
+  }
+
+  .activity-modal-title {
+    gap: 9px;
+  }
+
+  .activity-modal-icon {
+    width: 40px;
+    height: 40px;
+
+    font-size: 18px;
+  }
+
+  .activity-modal-title h2 {
+    font-size: 18px;
+  }
+
+  .activity-modal-title p {
+    font-size: 11px;
+  }
+
+  .activity-category-cards {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 7px;
+  }
+
+  .activity-category-card {
+    height: 42px;
+    min-height: 42px;
+    max-height: 42px;
+  }
+
+  .activity-category-card-label {
+    font-size: 11px;
+  }
+
+  .other-fields,
+  .form-row {
+    grid-template-columns:
+      1fr;
+  }
+
+  .activity-modal-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .activity-cancel-button,
+  .log-button,
+  .activity-submit-button {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .activity-modal-header {
+    padding: 14px;
+  }
+
+  .activity-modal-form {
+    padding: 14px;
+  }
+
+  .activity-modal-title h2 {
+    font-size: 16px;
+  }
+
+  .activity-modal-title p {
+    font-size: 10px;
+  }
+
+  .activity-modal-icon {
+    width: 37px;
+    height: 37px;
+
+    font-size: 16px;
+  }
+
+  .activity-category-cards {
+    gap: 6px;
+  }
+
+  .activity-category-card {
+    height: 40px;
+    min-height: 40px;
+    max-height: 40px;
+
+    padding: 5px 4px;
+
+    gap: 4px;
+  }
+
+  .activity-category-card-icon {
+    font-size: 15px;
+  }
+
+  .activity-category-card-label {
+    font-size: 10px;
+  }
+
+  .activity-options {
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 6px;
+  }
+
+  .activity-option {
+    min-height: 45px;
+
+    padding: 7px 5px;
+
+    font-size: 10.5px;
+  }
+
+  .other-activity-box {
+    padding: 12px;
+  }
+
+  .emission-box {
+    min-height: 78px;
+
+    padding: 13px 15px;
+  }
+
+  .emission-box h2 {
+    font-size: 22px;
+  }
+
+  .emission-box > svg {
+    width: 32px;
+    height: 32px;
+
+    padding: 7px;
+  }
+}

@@ -1,0 +1,2058 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f5faf7;
+  color: #244438;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+.admin-page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 90% 5%,
+      rgba(64, 180, 121, 0.11),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at 8% 82%,
+      rgba(73, 182, 126, 0.07),
+      transparent 23%
+    ),
+    #f5faf7;
+
+  color: #244438;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.admin-navbar {
+  height: 76px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e0f3e7 0%,
+      #eaf8ef 50%,
+      #f3fbf6 100%
+    );
+
+  border-bottom: 1px solid #c9e1d2;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 1000;
+
+  box-shadow:
+    0 4px 18px rgba(39, 112, 75, 0.07);
+}
+
+
+/* =========================================================
+   NAVBAR DECORATION
+========================================================= */
+
+.admin-navbar::after {
+  content: "";
+
+  position: absolute;
+
+  width: 100px;
+  height: 100px;
+
+  border-radius: 50%;
+
+  right: 220px;
+  top: -65px;
+
+  border: 15px solid rgba(45, 151, 94, 0.045);
+
+  box-shadow:
+    0 0 0 14px rgba(45, 151, 94, 0.018);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.admin-logo {
+  width: 255px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  cursor: pointer;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.admin-logo-icon {
+  width: 45px;
+  height: 45px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #3fae72,
+      #67c992
+    );
+
+  color: #ffffff;
+
+  font-size: 20px;
+
+  box-shadow:
+    0 8px 20px rgba(25, 145, 91, 0.18);
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.admin-logo-icon::before {
+  content: "";
+
+  position: absolute;
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  top: -17px;
+  right: -15px;
+}
+
+.admin-logo-icon::after {
+  content: "";
+
+  position: absolute;
+
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  bottom: -8px;
+  left: -5px;
+}
+
+.admin-logo-text h2 {
+  margin: 0;
+
+  color: #174632;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.4px;
+}
+
+.admin-logo-text span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #70917e;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.8px;
+}
+
+
+/* =========================================================
+   NAVBAR RIGHT
+========================================================= */
+
+.admin-nav-right {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   ADMIN PROFILE
+========================================================= */
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding-left: 20px;
+
+  border-left: 1px solid #d3e5db;
+}
+
+.admin-avatar {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d4efde,
+      #c1e8d0
+    );
+
+  color: #247b51;
+
+  border: 2px solid #b7dfc8;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 5px 15px rgba(32, 141, 91, 0.10);
+}
+
+.admin-profile-text {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1px;
+}
+
+.admin-profile-text strong {
+  color: #29493b;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.admin-profile-text span {
+  color: #80988b;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.admin-layout {
+  display: flex;
+
+  min-height: calc(100vh - 76px);
+
+  align-items: flex-start;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.admin-sidebar {
+  width: 255px;
+
+  flex-shrink: 0;
+
+  position: sticky;
+
+  top: 76px;
+
+  height: calc(100vh - 76px);
+
+  min-height: calc(100vh - 76px);
+
+  padding: 18px 13px 14px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background:
+    radial-gradient(
+      circle at 15% 8%,
+      rgba(82, 183, 123, 0.18),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 92% 70%,
+      rgba(82, 183, 123, 0.10),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      #e0f2e7 0%,
+      #e6f6ec 50%,
+      #edf9f2 100%
+    );
+
+  border-right: 1px solid #c9e1d2;
+
+  box-shadow:
+    5px 0 22px rgba(39, 112, 75, 0.07);
+
+  z-index: 50;
+
+  /*
+     IMPORTANT:
+     Sidebar itself no longer hides content.
+     The navigation section handles its own scrolling.
+  */
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   SIDEBAR DECORATION
+========================================================= */
+
+.admin-sidebar::before {
+  content: "";
+
+  position: absolute;
+
+  width: 190px;
+  height: 190px;
+
+  border-radius: 50%;
+
+  right: -105px;
+  top: 45px;
+
+  border: 25px solid rgba(48, 151, 94, 0.07);
+
+  box-shadow:
+    0 0 0 20px rgba(48, 151, 94, 0.035),
+    0 0 0 45px rgba(48, 151, 94, 0.018);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   SIDEBAR CONTENT AREA
+========================================================= */
+
+.admin-sidebar > * {
+  position: relative;
+
+  z-index: 3;
+}
+
+
+/*
+   The navigation gets all available space.
+   System/Logout stays below it.
+*/
+
+.sidebar-section {
+  position: relative;
+
+  z-index: 2;
+
+  flex: 1 1 auto;
+
+  min-height: 0;
+
+  overflow-y: auto;
+
+  overflow-x: hidden;
+
+  padding-right: 3px;
+
+  scrollbar-width: thin;
+
+  scrollbar-color: rgba(63, 145, 99, 0.25) transparent;
+}
+
+
+/* =========================================================
+   SIDEBAR SCROLLBAR
+========================================================= */
+
+.sidebar-section::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-section::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-section::-webkit-scrollbar-thumb {
+  background: rgba(63, 145, 99, 0.22);
+
+  border-radius: 10px;
+}
+
+.sidebar-section::-webkit-scrollbar-thumb:hover {
+  background: rgba(63, 145, 99, 0.40);
+}
+
+
+/* =========================================================
+   SIDEBAR TITLE
+========================================================= */
+
+.sidebar-title {
+  margin: 0 0 11px;
+
+  padding: 0 13px;
+
+  color: #5d8d70;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.6px;
+}
+
+
+/* =========================================================
+   SIDEBAR ITEM
+========================================================= */
+
+.sidebar-item {
+  width: 100%;
+  height: 43px;
+
+  margin-bottom: 4px;
+
+  padding: 0 12px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  border-radius: 11px;
+
+  color: #315d47;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  position: relative;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   SIDEBAR ICON
+========================================================= */
+
+.sidebar-item > svg:first-child {
+  width: 17px;
+
+  flex-shrink: 0;
+
+  color: #429669;
+
+  font-size: 14px;
+
+  transition: 0.25s ease;
+}
+
+
+/* =========================================================
+   SIDEBAR HOVER
+========================================================= */
+
+.sidebar-item:hover {
+  background:
+    linear-gradient(
+      90deg,
+      #d0ebda,
+      #def2e5
+    );
+
+  color: #17623e;
+
+  transform: translateX(3px);
+
+  box-shadow:
+    inset 3px 0 0 #4aaa73;
+}
+
+.sidebar-item:hover > svg:first-child {
+  color: #218653;
+
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   ACTIVE SIDEBAR
+========================================================= */
+
+.sidebar-item.active {
+  background:
+    linear-gradient(
+      100deg,
+      #62bd88 0%,
+      #48aa73 100%
+    );
+
+  color: #ffffff;
+
+  font-weight: 600;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  box-shadow:
+    0 6px 16px rgba(49, 137, 85, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.30);
+
+  transform: none;
+}
+
+.sidebar-item.active::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 8px;
+
+  width: 3px;
+  height: 27px;
+
+  border-radius: 0 5px 5px 0;
+
+  background: #ffffff;
+}
+
+.sidebar-item.active > svg:first-child {
+  color: #ffffff;
+}
+
+.sidebar-item.active .sidebar-arrow {
+  color: #ffffff !important;
+}
+
+
+/* =========================================================
+   SIDEBAR ARROW
+========================================================= */
+
+.sidebar-arrow {
+  margin-left: auto;
+
+  color: #75a98a !important;
+
+  font-size: 8px !important;
+
+  transition: 0.2s ease;
+}
+
+.sidebar-item:hover .sidebar-arrow {
+  color: #278654 !important;
+
+  transform: translateX(2px);
+}
+
+
+/* =========================================================
+   SIDEBAR BOTTOM
+========================================================= */
+
+.sidebar-bottom {
+  position: relative;
+
+  z-index: 4;
+
+  flex-shrink: 0;
+
+  /*
+     This is intentionally NOT margin-top:auto.
+     The navigation section above already occupies the
+     available space, keeping this section clean at bottom.
+  */
+  margin-top: 12px;
+
+  padding-top: 12px;
+
+  border-top: 1px solid rgba(113, 161, 132, 0.30);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(230, 246, 236, 0.65),
+      rgba(237, 249, 242, 0.98)
+    );
+}
+
+
+/* =========================================================
+   SIDEBAR BOTTOM ACCENT
+========================================================= */
+
+.sidebar-bottom::before {
+  content: "";
+
+  position: absolute;
+
+  width: 80px;
+  height: 80px;
+
+  right: -35px;
+  bottom: -40px;
+
+  border-radius: 50%;
+
+  border: 10px solid rgba(48, 151, 94, 0.045);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.logout-item {
+  color: #a4554e;
+}
+
+.logout-item > svg:first-child {
+  color: #c66a61;
+}
+
+.logout-item:hover {
+  color: #a33f37;
+
+  background:
+    linear-gradient(
+      90deg,
+      #fbe9e7,
+      #fff4f2
+    );
+
+  box-shadow:
+    inset 3px 0 0 #df8279;
+}
+
+.logout-item:hover > svg:first-child {
+  color: #c94e45;
+}
+
+
+/* =========================================================
+   SIDEBAR MESSAGE
+========================================================= */
+
+.sidebar-bottom::after {
+  content:
+    "Every small action creates a greener tomorrow";
+
+  display: block;
+
+  margin: 9px 4px 1px;
+
+  padding: 9px 11px;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d5efdf,
+      #e9f7ee
+    );
+
+  border: 1px solid #c5e3d0;
+
+  color: #669079;
+
+  font-size: 8px;
+
+  line-height: 1.45;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.admin-content {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 29px 31px 22px;
+
+  position: relative;
+
+  /*
+     IMPORTANT:
+     Do not clip the entire dashboard vertically.
+     The browser/page handles the main scrolling.
+  */
+  overflow: visible;
+
+  background:
+    radial-gradient(
+      circle at 90% 3%,
+      rgba(67, 183, 124, 0.11),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at 4% 75%,
+      rgba(75, 185, 128, 0.07),
+      transparent 22%
+    ),
+    #f5faf7;
+}
+
+
+/* =========================================================
+   MAIN DECORATION
+========================================================= */
+
+.admin-content::before {
+  content: "";
+
+  position: absolute;
+
+  width: 340px;
+  height: 340px;
+
+  right: -155px;
+  top: 25px;
+
+  border-radius: 50%;
+
+  border: 34px solid rgba(49, 164, 108, 0.045);
+
+  box-shadow:
+    0 0 0 32px rgba(49, 164, 108, 0.020),
+    0 0 0 67px rgba(49, 164, 108, 0.012);
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+.admin-content::after {
+  content: "🌿";
+
+  position: absolute;
+
+  left: 15px;
+  bottom: 55px;
+
+  font-size: 72px;
+
+  opacity: 0.035;
+
+  transform: rotate(15deg);
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+.admin-content > * {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   PAGE HEADING
+========================================================= */
+
+.admin-page-heading {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+
+  position: relative;
+}
+
+.dashboard-label {
+  margin: 0 0 5px;
+
+  color: #209568;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.6px;
+}
+
+.admin-page-heading h1 {
+  margin: 0;
+
+  color: #173f31;
+
+  font-size: 27px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  letter-spacing: -0.6px;
+}
+
+.admin-page-heading p:last-child {
+  margin: 6px 0 0;
+
+  color: #7c9188;
+
+  font-size: 11px;
+}
+
+.admin-page-heading::after {
+  content: "🍃";
+
+  position: absolute;
+
+  right: 250px;
+  top: -8px;
+
+  font-size: 31px;
+
+  opacity: 0.10;
+
+  transform: rotate(-18deg);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   PLATFORM OVERVIEW
+========================================================= */
+
+.dashboard-date {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 10px 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #f3faf6
+    );
+
+  border: 1px solid #d8e9df;
+
+  border-radius: 12px;
+
+  color: #47765f;
+
+  font-size: 10px;
+
+  box-shadow:
+    0 6px 18px rgba(35, 92, 62, 0.055);
+}
+
+.dashboard-date svg {
+  color: #209a69;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   STAT CARDS
+========================================================= */
+
+.admin-stats {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  min-width: 0;
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #fbfefc
+    );
+
+  border: 1px solid #deece5;
+
+  border-radius: 17px;
+
+  box-shadow:
+    0 7px 23px rgba(38, 86, 59, 0.045);
+
+  transition: 0.25s ease;
+}
+
+.stat-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 100px;
+  height: 100px;
+
+  right: -55px;
+  top: -55px;
+
+  border-radius: 50%;
+
+  border: 14px solid rgba(45, 163, 108, 0.045);
+}
+
+.stat-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 38px;
+  height: 38px;
+
+  right: 18px;
+  bottom: -22px;
+
+  border-radius: 50%;
+
+  border: 7px solid rgba(45, 163, 108, 0.035);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #c6e3d2;
+
+  box-shadow:
+    0 14px 30px rgba(38, 86, 59, 0.09);
+}
+
+
+/* =========================================================
+   STAT ICONS
+========================================================= */
+
+.stat-icon {
+  width: 45px;
+  height: 45px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #e1f5e9;
+
+  color: #23875a;
+
+  font-size: 17px;
+}
+
+.users-icon {
+  background: #e1f5e9;
+  color: #23875a;
+}
+
+.activity-icon {
+  background: #e0f4e9;
+  color: #218454;
+}
+
+.carbon-icon {
+  background: #daf1e2;
+  color: #16804f;
+}
+
+
+/* =========================================================
+   STAT TEXT
+========================================================= */
+
+.stat-card > div:last-child {
+  min-width: 0;
+}
+
+.stat-card span {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #84978e;
+
+  font-size: 9px;
+
+  white-space: nowrap;
+}
+
+.stat-card h2 {
+  margin: 0;
+
+  color: #214c38;
+
+  font-size: 22px;
+
+  line-height: 1.1;
+
+  font-weight: 700;
+}
+
+.stat-card small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #5f9875;
+
+  font-size: 8px;
+}
+
+.stat-card .unit {
+  display: inline;
+
+  margin-left: 3px;
+
+  color: #7f958a;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   CHART GRID
+========================================================= */
+
+.chart-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+
+  margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   DASHBOARD CARDS
+========================================================= */
+
+.dashboard-card {
+  position: relative;
+
+  overflow: hidden;
+
+  margin-bottom: 18px;
+
+  min-width: 0;
+
+  padding: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #fcfefd
+    );
+
+  border: 1px solid #dcebe4;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 7px 23px rgba(37, 84, 58, 0.045);
+
+  transition: 0.25s ease;
+}
+
+.dashboard-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 125px;
+  height: 125px;
+
+  right: -60px;
+  top: -60px;
+
+  border-radius: 50%;
+
+  border: 18px solid rgba(44, 158, 105, 0.045);
+
+  box-shadow:
+    0 0 0 16px rgba(44, 158, 105, 0.018);
+}
+
+.dashboard-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 65px;
+  height: 65px;
+
+  left: -35px;
+  bottom: -35px;
+
+  border-radius: 50%;
+
+  border: 10px solid rgba(45, 163, 108, 0.025);
+}
+
+.dashboard-card:hover {
+  box-shadow:
+    0 12px 30px rgba(37, 84, 58, 0.075);
+}
+
+
+/* =========================================================
+   CARD HEADING
+========================================================= */
+
+.card-heading {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 14px;
+
+  position: relative;
+
+  z-index: 3;
+}
+
+.card-heading h3 {
+  margin: 0;
+
+  color: #294b3b;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+.card-heading p {
+  margin: 4px 0 0;
+
+  color: #81968c;
+
+  font-size: 10px;
+}
+
+.card-icon {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e3f6eb,
+      #d2efdf
+    );
+
+  color: #258b59;
+
+  font-size: 14px;
+
+  box-shadow:
+    0 4px 10px rgba(38, 143, 91, 0.08);
+}
+
+
+/* =========================================================
+   PIE CHART
+========================================================= */
+
+.pie-card {
+  min-height: 400px;
+}
+
+.pie-wrapper {
+  height: 280px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.pie-center {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  pointer-events: none;
+}
+
+.pie-center strong {
+  color: #236348;
+
+  font-size: 21px;
+
+  font-weight: 700;
+}
+
+.pie-center span {
+  color: #98a69d;
+
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   CHART LEGEND
+========================================================= */
+
+.chart-legend {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 7px;
+
+  padding-top: 4px;
+
+  position: relative;
+
+  z-index: 3;
+}
+
+.legend-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: #718078;
+
+  font-size: 8px;
+}
+
+.legend-dot {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+}
+
+.legend-item strong {
+  margin-left: auto;
+
+  color: #426653;
+
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   CHART CONTAINER
+========================================================= */
+
+.chart-container {
+  width: 100%;
+
+  height: 330px;
+
+  min-height: 290px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.chart-loading {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #82978d;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   RECHARTS
+========================================================= */
+
+.recharts-text {
+  font-family: "Poppins", sans-serif;
+
+  fill: #7c9187;
+
+  font-size: 9px;
+}
+
+.recharts-cartesian-axis-line {
+  stroke: #e2eee7;
+}
+
+.recharts-cartesian-grid-horizontal line {
+  stroke: #edf3ef;
+}
+
+.recharts-tooltip-wrapper {
+  outline: none;
+}
+
+.recharts-default-tooltip {
+  background: #ffffff !important;
+
+  border: 1px solid #dcebe3 !important;
+
+  border-radius: 10px !important;
+
+  box-shadow:
+    0 8px 25px rgba(33, 78, 53, 0.10) !important;
+}
+
+
+/* =========================================================
+   USER MANAGEMENT
+========================================================= */
+
+.admin-user-management {
+  position: relative;
+
+  z-index: 2;
+}
+
+.user-message {
+  padding: 14px 17px;
+
+  margin-bottom: 16px;
+
+  border-radius: 11px;
+
+  background: #fff4f2;
+
+  border: 1px solid #ffd9d5;
+
+  color: #bd554c;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   USER TABLE
+========================================================= */
+
+.table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  position: relative;
+
+  z-index: 3;
+}
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+thead {
+  background:
+    linear-gradient(
+      90deg,
+      #eff9f3,
+      #f6fbf8
+    );
+}
+
+th {
+  padding: 11px 12px;
+
+  text-align: left;
+
+  color: #56836a;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  border-bottom: 1px solid #dceae1;
+}
+
+td {
+  padding: 11px 12px;
+
+  color: #53645a;
+
+  font-size: 10px;
+
+  border-bottom: 1px solid #edf2ef;
+}
+
+tbody tr {
+  transition: 0.2s ease;
+}
+
+tbody tr:hover {
+  background: #f4faf6;
+}
+
+
+/* =========================================================
+   USER CELL
+========================================================= */
+
+.user-cell {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.user-mini-avatar {
+  width: 28px;
+  height: 28px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e0f3e7,
+      #d1ecdb
+    );
+
+  color: #28794d;
+
+  font-size: 9px;
+
+  font-weight: 600;
+}
+
+.user-cell strong {
+  color: #3e5145;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   CARBON VALUE
+========================================================= */
+
+.carbon-value {
+  color: #287348;
+
+  font-weight: 600;
+}
+
+.co2-label {
+  margin-left: 3px;
+
+  color: #9aa69f;
+
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 55px;
+
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e4f6ea,
+      #d9f1e1
+    );
+
+  border: 1px solid #cce8d6;
+
+  color: #2f8250;
+
+  font-size: 8px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   USER ACTIONS
+========================================================= */
+
+.admin-user-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+.admin-user-actions button {
+  width: 29px;
+  height: 29px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.admin-edit-btn {
+  background: #e2f4e9;
+
+  color: #2e8b57;
+}
+
+.admin-edit-btn:hover {
+  background: #cdebd8;
+
+  transform: translateY(-2px);
+}
+
+.admin-suspend-btn {
+  background: #fff1ef;
+
+  color: #c65a51;
+}
+
+.admin-suspend-btn:hover {
+  background: #ffe0dc;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ADMIN SECTION PLACEHOLDER
+========================================================= */
+
+.admin-section-placeholder {
+  position: relative;
+
+  z-index: 2;
+}
+
+.admin-section-placeholder .dashboard-card {
+  min-height: 300px;
+}
+
+
+/* =========================================================
+   COMING SOON CONTENT
+========================================================= */
+
+.coming-soon-content {
+  min-height: 210px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  position: relative;
+
+  z-index: 3;
+}
+
+.coming-soon-content > svg {
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: 12px;
+
+  padding: 13px;
+
+  border-radius: 14px;
+
+  background: #e1f5e9;
+
+  color: #2e8b57;
+}
+
+.coming-soon-content h2 {
+  margin: 0;
+
+  color: #315744;
+
+  font-size: 17px;
+
+  font-weight: 600;
+}
+
+.coming-soon-content p {
+  margin: 7px 0 0;
+
+  max-width: 430px;
+
+  color: #8a9b92;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.admin-footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 10px 3px 0;
+
+  color: #9aa69f;
+
+  font-size: 8px;
+
+  position: relative;
+
+  z-index: 3;
+}
+
+
+/* =========================================================
+   LARGE SCREEN
+========================================================= */
+
+@media (min-width: 1400px) {
+
+  .admin-sidebar {
+    width: 270px;
+  }
+
+  .admin-logo {
+    width: 270px;
+  }
+
+  .admin-content {
+    padding: 32px 35px 22px;
+  }
+
+  .admin-stats {
+    gap: 18px;
+  }
+
+  .stat-card {
+    padding: 19px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .admin-sidebar {
+    width: 235px;
+  }
+
+  .admin-logo {
+    width: 235px;
+  }
+
+  .admin-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .admin-navbar {
+    padding: 0 18px;
+  }
+
+  .admin-sidebar {
+    width: 220px;
+
+    padding: 18px 10px 14px;
+  }
+
+  .admin-logo {
+    width: 220px;
+  }
+
+  .admin-logo-text h2 {
+    font-size: 16px;
+  }
+
+  .admin-content {
+    padding: 22px 20px;
+  }
+
+  .sidebar-item {
+    font-size: 10px;
+  }
+
+  .admin-profile {
+    padding-left: 14px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .admin-navbar {
+    height: 68px;
+
+    padding: 0 12px;
+  }
+
+  .admin-layout {
+    min-height: calc(100vh - 68px);
+
+    align-items: flex-start;
+  }
+
+  .admin-sidebar {
+    position: sticky;
+
+    top: 68px;
+
+    width: 205px;
+
+    height: calc(100vh - 68px);
+
+    min-height: calc(100vh - 68px);
+
+    padding: 17px 9px 12px;
+  }
+
+  .admin-logo {
+    width: auto;
+  }
+
+  .admin-logo-icon {
+    width: 38px;
+    height: 38px;
+
+    font-size: 17px;
+  }
+
+  .admin-logo-text h2 {
+    font-size: 14px;
+  }
+
+  .admin-logo-text span {
+    font-size: 8px;
+  }
+
+  .admin-profile-text {
+    display: none;
+  }
+
+  .admin-profile {
+    padding-left: 8px;
+  }
+
+  .admin-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .admin-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-page-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 14px;
+  }
+
+  .admin-page-heading h1 {
+    font-size: 23px;
+  }
+
+  .admin-page-heading::after {
+    display: none;
+  }
+
+  .dashboard-date {
+    width: fit-content;
+  }
+
+  .admin-content {
+    padding: 18px 14px;
+
+    overflow: visible;
+  }
+
+  .dashboard-card {
+    padding: 16px;
+  }
+
+  .admin-footer {
+    flex-direction: column;
+
+    gap: 5px;
+  }
+
+  .chart-container {
+    height: 280px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREEN
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .admin-sidebar {
+    width: 185px;
+  }
+
+  .sidebar-item {
+    font-size: 9px;
+
+    gap: 8px;
+
+    padding: 0 9px;
+  }
+
+  .sidebar-item > svg:first-child {
+    font-size: 12px;
+  }
+
+  .sidebar-title {
+    font-size: 8px;
+
+    padding-left: 9px;
+  }
+
+  .admin-page-heading h1 {
+    font-size: 21px;
+  }
+
+  .stat-card {
+    padding: 14px;
+  }
+
+  .admin-content {
+    padding: 14px 11px;
+
+    overflow: visible;
+  }
+
+  .dashboard-card {
+    padding: 14px;
+  }
+
+  .chart-legend {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-container {
+    height: 250px;
+  }
+}
+
+
+/* =========================================================
+   USER TABLE MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  .admin-user-actions {
+    gap: 5px;
+  }
+}

@@ -1,0 +1,653 @@
+ /* =========================================================
+    ADMIN GOALS
+    ========================================================= */
+
+.admin-goals {
+  width: 100%;
+  padding: 4px 0 30px;
+  box-sizing: border-box;
+  color: #183b2a;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.admin-goals-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.admin-goals-title-row {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.admin-goals-title-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8f6ed;
+  color: #248a4b;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.admin-goals-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #173b29;
+  letter-spacing: -0.3px;
+}
+
+.admin-goals-header p {
+  margin: 4px 0 0;
+  color: #718078;
+  font-size: 13px;
+}
+
+.admin-goals-refresh {
+  border: 1px solid #d5e6da;
+  background: #ffffff;
+  color: #287747;
+  border-radius: 8px;
+  padding: 9px 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-goals-refresh:hover {
+  background: #f0f8f3;
+  border-color: #b9d8c3;
+}
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.admin-goals-error {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 14px;
+  margin-bottom: 18px;
+  border: 1px solid #f0cccc;
+  background: #fff6f6;
+  color: #b53a3a;
+  border-radius: 9px;
+  font-size: 13px;
+}
+
+/* =========================================================
+   SUMMARY CARDS
+   ========================================================= */
+
+.admin-goals-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.admin-goal-summary-card {
+  min-height: 82px;
+  padding: 15px 17px;
+  box-sizing: border-box;
+  border: 1px solid #e1ebe4;
+  border-radius: 11px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  box-shadow: 0 2px 7px rgba(27, 75, 48, 0.035);
+}
+
+.admin-goal-summary-icon {
+  width: 39px;
+  height: 39px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.admin-goal-summary-icon.total {
+  background: #eaf6ee;
+  color: #23834a;
+}
+
+.admin-goal-summary-icon.active {
+  background: #eef7ef;
+  color: #4d9462;
+}
+
+.admin-goal-summary-icon.completed {
+  background: #e8f7ef;
+  color: #23925a;
+}
+
+.admin-goal-summary-icon.expired {
+  background: #fff2ed;
+  color: #c66b4e;
+}
+
+.admin-goal-summary-card span {
+  display: block;
+  color: #78867e;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.admin-goal-summary-card strong {
+  display: block;
+  color: #183d2b;
+  font-size: 21px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+/* =========================================================
+   FILTER SECTION
+   ========================================================= */
+
+.admin-goals-filter-section {
+  background: #ffffff;
+  border: 1px solid #e1ebe4;
+  border-radius: 11px;
+  padding: 15px 16px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 7px rgba(27, 75, 48, 0.035);
+}
+
+.admin-goals-filter-heading {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #286d42;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 13px;
+}
+
+.admin-goals-filter-heading svg {
+  font-size: 12px;
+}
+
+.admin-goals-filters {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  width: 100%;
+}
+
+.admin-goals-filter-item {
+  min-width: 130px;
+  flex: 1;
+}
+
+.admin-goals-filter-item.user-search {
+  flex: 1.35;
+}
+
+.admin-goals-filter-item label {
+  display: block;
+  margin-bottom: 5px;
+  color: #64736b;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.admin-goals-filter-item input,
+.admin-goals-filter-item select {
+  width: 100%;
+  height: 36px;
+  box-sizing: border-box;
+  border: 1px solid #d8e4dc;
+  border-radius: 7px;
+  background: #fbfdfc;
+  color: #294637;
+  padding: 0 10px;
+  outline: none;
+  font-size: 11px;
+  transition: all 0.2s ease;
+}
+
+.admin-goals-filter-item input::placeholder {
+  color: #a0aaa5;
+}
+
+.admin-goals-filter-item input:focus,
+.admin-goals-filter-item select:focus {
+  border-color: #64a97b;
+  background: #ffffff;
+  box-shadow: 0 0 0 2px rgba(75, 155, 99, 0.08);
+}
+
+.admin-goals-filter-item select {
+  cursor: pointer;
+}
+
+/* =========================================================
+   RESET BUTTON
+   ========================================================= */
+
+.admin-goals-reset {
+  height: 36px;
+  padding: 0 13px;
+  border: 1px solid #d7e4db;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #557064;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.admin-goals-reset:hover {
+  background: #f1f8f3;
+  color: #287747;
+  border-color: #b9d7c2;
+}
+
+.admin-goals-reset svg {
+  font-size: 10px;
+}
+
+/* =========================================================
+   RECORD ACTIONS
+   ========================================================= */
+
+.admin-goals-record-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.admin-goals-record-actions > div:first-child {
+  color: #7a8780;
+  font-size: 12px;
+}
+
+.admin-goals-record-actions > div:first-child strong {
+  color: #276e43;
+  font-size: 13px;
+}
+
+.admin-goals-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-goals-view-button,
+.admin-goals-download {
+  height: 34px;
+  padding: 0 13px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-goals-view-button {
+  border: 1px solid #cfe0d5;
+  background: #ffffff;
+  color: #2a7045;
+}
+
+.admin-goals-view-button:hover {
+  background: #edf7f0;
+  border-color: #afd0ba;
+}
+
+.admin-goals-download {
+  border: 1px solid #2f8650;
+  background: #2f8650;
+  color: #ffffff;
+}
+
+.admin-goals-download:hover {
+  background: #267343;
+  border-color: #267343;
+}
+
+.admin-goals-download:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   TABLE CONTAINER
+   ========================================================= */
+
+.admin-goals-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e1ebe4;
+  border-radius: 11px;
+  background: #ffffff;
+  box-shadow: 0 2px 7px rgba(27, 75, 48, 0.035);
+}
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.admin-goals-table {
+  width: 100%;
+  min-width: 1120px;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.admin-goals-table thead {
+  background: #f3f8f4;
+}
+
+.admin-goals-table th {
+  padding: 11px 10px;
+  text-align: left;
+  color: #4c6356;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+  border-bottom: 1px solid #dfe9e2;
+}
+
+.admin-goals-table td {
+  padding: 11px 10px;
+  color: #46584d;
+  font-size: 10.5px;
+  border-bottom: 1px solid #edf1ee;
+  vertical-align: middle;
+}
+
+.admin-goals-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-goals-table tbody tr:hover {
+  background: #fafdfb;
+}
+
+/* =========================================================
+   USER
+   ========================================================= */
+
+.admin-goals-user span {
+  color: #326247;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   GOAL TITLE
+   ========================================================= */
+
+.admin-goals-goal-title {
+  color: #234934;
+  font-size: 11px;
+  font-weight: 700;
+  min-width: 110px;
+}
+
+.admin-goals-description {
+  max-width: 170px;
+  margin-top: 3px;
+  color: #89938d;
+  font-size: 9px;
+  line-height: 1.35;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   CATEGORY
+   ========================================================= */
+
+.admin-goals-category {
+  display: inline-block;
+  padding: 4px 7px;
+  border-radius: 5px;
+  background: #eef7f0;
+  color: #39724e;
+  font-size: 9.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   UNIT
+   ========================================================= */
+
+.admin-goals-unit {
+  color: #8a968f;
+  font-size: 9px;
+}
+
+/* =========================================================
+   PROGRESS
+   ========================================================= */
+
+.admin-goals-progress-cell {
+  min-width: 90px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.admin-goals-progress-bar {
+  width: 55px;
+  height: 6px;
+  background: #e6eee8;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.admin-goals-progress-fill {
+  height: 100%;
+  background: #43a765;
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+.admin-goals-progress-cell > span {
+  color: #36744d;
+  font-size: 9.5px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.admin-goals-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 57px;
+  padding: 4px 7px;
+  border-radius: 20px;
+  font-size: 8.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.admin-goals-status.active {
+  background: #edf7ef;
+  color: #37804d;
+}
+
+.admin-goals-status.completed {
+  background: #e8f7ee;
+  color: #21834b;
+}
+
+.admin-goals-status.expired {
+  background: #fff0eb;
+  color: #c26246;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.admin-goals-empty {
+  min-height: 220px;
+  padding: 35px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.admin-goals-empty svg {
+  color: #8ab99a;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.admin-goals-empty h3 {
+  margin: 0 0 5px;
+  color: #365744;
+  font-size: 15px;
+}
+
+.admin-goals-empty p {
+  margin: 0;
+  color: #8a958f;
+  font-size: 11px;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.admin-goals-loading {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6d8175;
+  font-size: 13px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .admin-goals-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-goals-filters {
+    flex-wrap: wrap;
+  }
+
+  .admin-goals-filter-item {
+    flex: 1 1 150px;
+  }
+
+  .admin-goals-filter-item.user-search {
+    flex: 1 1 200px;
+  }
+
+  .admin-goals-reset {
+    margin-top: 17px;
+  }
+}
+
+@media (max-width: 760px) {
+  .admin-goals-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-goals-refresh {
+    align-self: flex-start;
+  }
+
+  .admin-goals-summary {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .admin-goal-summary-card {
+    padding: 12px;
+  }
+
+  .admin-goal-summary-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .admin-goals-record-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-goals-action-buttons {
+    width: 100%;
+  }
+
+  .admin-goals-view-button,
+  .admin-goals-download {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-goals-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-goals-header h1 {
+    font-size: 21px;
+  }
+
+  .admin-goals-filter-section {
+    padding: 13px;
+  }
+
+  .admin-goals-filter-item {
+    flex: 1 1 100%;
+  }
+
+  .admin-goals-reset {
+    width: 100%;
+    margin-top: 0;
+  }
+}
